@@ -14,6 +14,18 @@ app.get('/', function (request, response) {
   response.render('home');
 });
 
+app.get('/home', function (request, response) {
+  response.redirect('/');
+});
+
+app.get('/menu', function (request, response) {
+  response.render('menu');
+});
+
+app.get('/contact', function (request, response) {
+  response.render('contact');
+});
+
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
 });
